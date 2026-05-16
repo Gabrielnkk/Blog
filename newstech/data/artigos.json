@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "titulo": "Como os LLMs realmente funcionam: da atenção ao token gerado",
-    "resumo": "Uma análise profunda da arquitetura transformer, mecanismos de atenção e como modelos de linguagem produzem texto coerente — explicado do zero.",
-    "conteudo": "Os modelos de linguagem de grande escala (LLMs) revolucionaram a forma como interagimos com computadores. Mas como eles realmente funcionam por baixo?\n\n## Atenção é tudo\n\nO coração de um LLM moderno é o mecanismo de atenção, introduzido no paper 'Attention is All You Need' em 2017. Em vez de processar texto palavra por palavra de forma sequencial, a atenção permite que o modelo considere todas as palavras de uma vez, pesando a importância de cada uma em relação às outras.\n\n## Tokens, não palavras\n\nLLMs não processam palavras — eles processam tokens. Um token pode ser uma palavra inteira, parte de uma palavra, ou até um sinal de pontuação. O texto 'NewsTech' pode virar dois tokens: 'News' e 'Tech'.\n\n## O processo de geração\n\nQando você envia uma mensagem, o modelo converte o texto em tokens, processa através de camadas de atenção, e gera probabilidades para o próximo token. O token mais provável (ou um escolhido por amostragem) é adicionado, e o processo se repete até completar a resposta.",
+    "titulo": "O smartphone robótico é real: Honor confirma lançamento de celular com IA e gimbal integrado",
+    "resumo": "Fabricante chinesa aproveita os holofotes globais para anunciar dispositivo que promete transformar a criação de vídeos de forma autónoma e sem acessórios externos",
+    "conteudo": "Durante a prestigiada China Night no Festival de Cinema de Cannes, na França, a Honor anunciou que colocará no mercado global, entre julho e setembro de 2026, o Honor Robot Phone, seu primeiro smartphone com braço robótico integrado. Equipado com algoritmos avançados de inteligência artificial 🧠 e um sistema mecânico miniaturizado, o aparelho interage fisicamente com o utilizador e move-se sozinho para capturar tomadas cinematográficas perfeitas. A novidade chamou a atenção de realizadores e entusiastas do setor pelo potencial de unir hardware de ponta a um ecossistema inteligente direcionado para a produção audiovisual.",
     "categoria": "IA",
     "tags": ["LLM", "Transformers", "IA Generativa"],
     "data": "2026-05-14",
