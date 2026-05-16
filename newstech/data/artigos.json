@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "titulo": "Como os LLMs realmente funcionam: da atenção ao token gerado",
+    "resumo": "Uma análise profunda da arquitetura transformer, mecanismos de atenção e como modelos de linguagem produzem texto coerente — explicado do zero.",
+    "conteudo": "Os modelos de linguagem de grande escala (LLMs) revolucionaram a forma como interagimos com computadores. Mas como eles realmente funcionam por baixo?\n\n## Atenção é tudo\n\nO coração de um LLM moderno é o mecanismo de atenção, introduzido no paper 'Attention is All You Need' em 2017. Em vez de processar texto palavra por palavra de forma sequencial, a atenção permite que o modelo considere todas as palavras de uma vez, pesando a importância de cada uma em relação às outras.\n\n## Tokens, não palavras\n\nLLMs não processam palavras — eles processam tokens. Um token pode ser uma palavra inteira, parte de uma palavra, ou até um sinal de pontuação. O texto 'NewsTech' pode virar dois tokens: 'News' e 'Tech'.\n\n## O processo de geração\n\nQando você envia uma mensagem, o modelo converte o texto em tokens, processa através de camadas de atenção, e gera probabilidades para o próximo token. O token mais provável (ou um escolhido por amostragem) é adicionado, e o processo se repete até completar a resposta.",
+    "categoria": "IA",
+    "tags": ["LLM", "Transformers", "IA Generativa"],
+    "data": "2026-05-14",
+    "tempoDeLeitura": 12,
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "titulo": "Agentes autônomos de IA: o que mudou em 2026 e para onde estamos indo",
+    "resumo": "De assistentes simples a agentes que executam tarefas complexas sem intervenção humana — o que realmente mudou e quais os riscos.",
+    "conteudo": "Em 2024, agentes de IA eram promessas. Em 2026, são realidade no dia a dia de empresas e desenvolvedores.\n\n## O que é um agente de IA?\n\nUm agente é um sistema de IA capaz de planejar, tomar decisões e executar ações de forma autônoma para atingir um objetivo. Diferente de um chatbot que apenas responde, um agente pode navegar na web, escrever código, enviar e-mails e interagir com sistemas externos.\n\n## O que mudou em 2026\n\nOs modelos ficaram muito melhores em raciocínio de longo prazo. A capacidade de manter contexto por horas de execução, combinada com ferramentas cada vez mais sofisticadas, tornou os agentes práticos para tarefas reais.\n\n## Os desafios que ainda existem\n\nConfiabilidade ainda é o maior problema. Agentes cometem erros, e em tarefas longas, um erro pequeno pode se propagar. A supervisão humana ainda é essencial na maioria dos casos.",
+    "categoria": "IA",
+    "tags": ["Agentes", "IA", "Automação"],
+    "data": "2026-05-14",
+    "tempoDeLeitura": 15,
+    "destaque": false
+  },
+  {
+    "id": 3,
+    "titulo": "NVIDIA Blackwell vs AMD MI350: qual GPU domina o mercado de IA?",
+    "resumo": "Comparamos as duas GPUs mais poderosas do mercado em benchmarks reais de treinamento e inferência de modelos de linguagem.",
+    "conteudo": "A guerra das GPUs para IA nunca foi tão acirrada. NVIDIA e AMD estão em uma corrida que beneficia toda a indústria — mas qual escolher?\n\n## NVIDIA Blackwell\n\nA arquitetura Blackwell trouxe o NVLink 5.0, permitindo comunicação entre GPUs em velocidades sem precedentes. Para treinamento de modelos grandes, isso é decisivo. O GB200 consome menos energia que o H100 enquanto entrega mais do dobro de performance.\n\n## AMD MI350\n\nA AMD apostou em memória: o MI350 vem com 288GB de HBM3E, muito mais que a concorrência. Para modelos que não cabem na VRAM de uma única GPU, isso muda o jogo completamente.\n\n## Quem vence?\n\nDepende do caso de uso. Para treinamento em clusters grandes: NVIDIA. Para inferência de modelos enormes em hardware único: AMD é uma alternativa real pela primeira vez.",
+    "categoria": "Hardware",
+    "tags": ["NVIDIA", "AMD", "GPU", "Hardware"],
+    "data": "2026-05-13",
+    "tempoDeLeitura": 9,
+    "destaque": false
+  },
+  {
+    "id": 4,
+    "titulo": "Rust em 2026: por que virou escolha padrão para sistemas críticos",
+    "resumo": "De projeto experimental da Mozilla a linguagem adotada pelo kernel Linux, pelo Windows e por centenas de startups — a ascensão do Rust.",
+    "conteudo": "Rust passou de curiosidade para mainstream mais rápido do que qualquer linguagem na história recente. Como isso aconteceu?\n\n## O problema que Rust resolve\n\nMemory safety — erros de memória são responsáveis por cerca de 70% das vulnerabilidades de segurança em sistemas escritos em C/C++. Rust elimina essa categoria inteira de bugs em tempo de compilação, sem coletor de lixo.\n\n## A adoção explodiu\n\nO kernel Linux começou a aceitar código Rust em 2022. A Microsoft reescreveu partes críticas do Windows em Rust. O governo dos EUA recomendou formalmente a migração para linguagens memory-safe. Em 2026, Rust é a segunda linguagem mais usada em sistemas embarcados.\n\n## Vale aprender?\n\nSe você trabalha com sistemas, infraestrutura ou segurança — sim, com urgência. A curva de aprendizado é real, mas o mercado de trabalho para desenvolvedores Rust cresceu 340% em três anos.",
+    "categoria": "Software",
+    "tags": ["Rust", "Linguagens", "Segurança", "Software"],
+    "data": "2026-05-12",
+    "tempoDeLeitura": 7,
+    "destaque": false
+  },
+  {
+    "id": 5,
+    "titulo": "Computação quântica explicada: onde estamos e quando vai mudar tudo",
+    "resumo": "Do qubit ao algoritmo de Shor — entenda o estado atual da computação quântica e o que esperar dos próximos anos sem o hype.",
+    "conteudo": "Computação quântica é simultaneamente a tecnologia mais hipada e mais incompreendida da atualidade. Vamos separar o que é real do que é ficção científica.\n\n## O que um computador quântico realmente faz\n\nComputadores clássicos processam bits: 0 ou 1. Qubits podem estar em superposição — 0 e 1 ao mesmo tempo — até serem medidos. Isso não significa que são 'mais rápidos em tudo'. São mais rápidos em problemas específicos com estrutura matemática que a física quântica consegue explorar.\n\n## Onde estamos hoje\n\nO IBM Condor tem 1.121 qubits, mas qubits com erro não servem para computação real. O que importa são qubits lógicos (com correção de erro), e aí o número cai drasticamente. Estamos ainda na era NISQ — Noisy Intermediate-Scale Quantum.\n\n## Quando vai mudar tudo?\n\nQuebrar criptografia RSA com Shor: estimativas sérias apontam para 2030-2040, com sorte. Simulação molecular para farmacêutica: 2027-2030 é realista para casos de uso específicos.",
+    "categoria": "Ciência",
+    "tags": ["Quantum", "Computação", "Ciência"],
+    "data": "2026-05-10",
+    "tempoDeLeitura": 11,
+    "destaque": false
+  }
+]

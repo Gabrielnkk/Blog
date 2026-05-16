@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NewsTech — Tecnologia explicada com profundidade</title>
+<meta name="description" content="Portal de artigos sobre tecnologia, IA, hardware, software e ciência da computação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo" onclick="showPage('home')">News<span>Tech</span></div>
+  <ul class="nav-links">
+    <li><a onclick="showPage('home')" id="nl-home" class="active-link">Home</a></li>
+    <li><a onclick="showPage('categorias')" id="nl-categorias">Categorias</a></li>
+    <li><a onclick="showPage('newsletter')" id="nl-newsletter">Newsletter</a></li>
+    <li><a onclick="showPage('sobre')" id="nl-sobre">Sobre</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="search-wrap">
+      <input class="search-box" type="text" placeholder="Buscar artigos..." id="searchInput"
+        oninput="handleSearch(this.value)" onfocus="showSR()" onblur="setTimeout(hideSR,200)">
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    <div class="theme-btn" onclick="toggleTheme()" title="Alternar tema">☀</div>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+
+  <div class="masthead">
+    <div class="masthead-eyebrow">Portal de artigos sobre tecnologia</div>
+    <div class="masthead-name">News<span>Tech</span></div>
+    <div class="masthead-tagline">Tecnologia explicada com profundidade e clareza</div>
+    <div class="masthead-date" id="mastDate"></div>
+  </div>
+
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- Hero newspaper layout -->
+  <div class="hero-section" id="heroSection"></div>
+
+  <div class="section-div">
+    <div class="section-rule">
+      <span class="section-rule-title">Mais artigos</span>
+      <div class="section-rule-line"></div>
+    </div>
+    <div class="articles-grid" id="homeGrid"></div>
+  </div>
+
+  <!-- Newsletter inline -->
+  <div class="newsletter-section">
+    <div class="newsletter-inner">
+      <div class="newsletter-icon">✉️</div>
+      <div class="newsletter-label">Newsletter NewsTech</div>
+      <h2 class="newsletter-h">Tecnologia direto na sua caixa de entrada</h2>
+      <p class="newsletter-p">Toda semana, os melhores artigos sobre IA, hardware, software e ciência da computação — sem spam, sem enrolação.</p>
+      <div class="newsletter-form" id="nlForm">
+        <input class="newsletter-input" type="email" placeholder="seu@email.com" id="nlEmail">
+        <button class="newsletter-btn" onclick="subscribe('nlEmail','nlSuccess','nlForm')">Inscrever-se</button>
+      </div>
+      <div class="newsletter-success" id="nlSuccess">✅ Inscrito com sucesso! Bem-vindo à NewsTech.</div>
+      <p class="newsletter-fine">Sem spam. Cancele a qualquer momento.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CATEGORIAS -->
+<div class="page" id="page-categorias">
+  <div class="page-inner">
+    <div class="section-rule" style="margin-bottom:1.5rem">
+      <span class="section-rule-title">Categorias</span>
+      <div class="section-rule-line"></div>
+    </div>
+    <div class="layout-split">
+      <div>
+        <div class="cat-pills" id="catBar">
+          <span class="cat-pill active" onclick="filterCat('todas',this)">Todas</span>
+          <span class="cat-pill" onclick="filterCat('IA',this)">Inteligência Artificial</span>
+          <span class="cat-pill" onclick="filterCat('Hardware',this)">Hardware</span>
+          <span class="cat-pill" onclick="filterCat('Software',this)">Software</span>
+          <span class="cat-pill" onclick="filterCat('Segurança',this)">Segurança</span>
+          <span class="cat-pill" onclick="filterCat('Ciência',this)">Ciência</span>
+        </div>
+        <div class="articles-grid" id="catGrid"></div>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <div class="sidebar-h">Mais lidos</div>
+          <div id="trendingList"></div>
+        </div>
+        <div class="sidebar-card">
+          <div class="sidebar-h">Tags</div>
+          <div class="tag-cloud" id="tagCloud"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTIGO INDIVIDUAL -->
+<div class="page" id="page-artigo">
+  <div class="article-page-inner" id="articleContent"></div>
+</div>
+
+<!-- NEWSLETTER PAGE -->
+<div class="page" id="page-newsletter">
+  <div class="newsletter-section" style="margin:0;border:none;padding:4rem 2rem">
+    <div class="newsletter-inner">
+      <div class="newsletter-icon">✉️</div>
+      <div class="newsletter-label">Newsletter NewsTech</div>
+      <h2 class="newsletter-h">Tecnologia direto na sua caixa de entrada</h2>
+      <p class="newsletter-p">Toda semana, os melhores artigos sobre IA, hardware, software e ciência da computação — sem spam, sem enrolação. Cancele quando quiser.</p>
+      <div class="newsletter-form" id="nlForm2">
+        <input class="newsletter-input" type="email" placeholder="seu@email.com" id="nlEmail2">
+        <button class="newsletter-btn" onclick="subscribe('nlEmail2','nlSuccess2','nlForm2')">Inscrever-se</button>
+      </div>
+      <div class="newsletter-success" id="nlSuccess2">✅ Inscrito com sucesso! Bem-vindo à NewsTech.</div>
+      <p class="newsletter-fine">Sem spam. Cancele a qualquer momento.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SOBRE -->
+<div class="page" id="page-sobre">
+  <div class="page-inner">
+    <div class="about-hero">
+      <div class="about-label">// sobre o projeto</div>
+      <h2 class="about-h">Jornalismo tecnológico com profundidade real</h2>
+      <p class="about-p">NewsTech nasceu da vontade de cobrir tecnologia com seriedade — sem hype vazio, sem superficialidade. Cada artigo passa por um processo editorial rigoroso, com assistência de inteligências artificiais especializadas e revisão humana em cada etapa.</p>
+      <p class="about-p">Cobrimos IA, hardware, software, segurança digital e ciência da computação — sempre com contexto, análise e linguagem acessível para quem quer entender de verdade.</p>
+      <div class="stat-row">
+        <div><div class="stat-num">2 IAs</div><div class="stat-label">assistentes editoriais</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">revisado por humano</div></div>
+        <div><div class="stat-num">5 áreas</div><div class="stat-label">de cobertura</div></div>
+      </div>
+    </div>
+    <div class="workflow">
+      <div class="workflow-h">// como um artigo é produzido</div>
+      <div class="wf-steps">
+        <div class="wf-step"><div class="wf-icon">🔍</div><div class="wf-name">IA Pesquisadora</div><div class="wf-desc">Coleta fontes, dados e contexto sobre o tema</div></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><div class="wf-icon">✍️</div><div class="wf-name">IA Redatora</div><div class="wf-desc">Estrutura e escreve o artigo com clareza</div></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step"><div class="wf-icon">👤</div><div class="wf-name">Editor humano</div><div class="wf-desc">Revisa, corrige e aprova cada publicação</div></div>
+        <div class="wf-arrow">→</div>
+        <div class="wf-step" style="border-color:var(--accent)"><div class="wf-icon">📰</div><div class="wf-name">NewsTech</div><div class="wf-desc">Artigo publicado com qualidade garantida</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">News<span>Tech</span></div>
+  <p>© <span id="footerYear"></span> NewsTech · Tecnologia explicada com profundidade · Produzido com IA, revisado por humanos</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>

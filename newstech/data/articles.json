@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "titulo": "Como os LLMs realmente funcionam: da atenção ao token gerado",
+    "resumo": "Uma análise profunda da arquitetura transformer, mecanismos de atenção e como modelos de linguagem produzem texto coerente — explicado do zero.",
+    "conteudo": "Os modelos de linguagem de grande escala (LLMs) revolucionaram a forma como interagimos com computadores. Mas como eles realmente funcionam por dentro?\n\n## A arquitetura Transformer\n\nTudo começa com o Transformer, arquitetura apresentada no paper 'Attention is All You Need' em 2017. A ideia central é simples: em vez de processar texto palavra por palavra em sequência (como as RNNs faziam), o Transformer olha para todas as palavras ao mesmo tempo e calcula quais delas são mais relevantes entre si.\n\nEsse mecanismo se chama **atenção** (attention). Para cada palavra da frase, o modelo pergunta: 'quais outras palavras desta frase devo levar em conta para entender esta aqui?'\n\n## Tokenização\n\nAntes de qualquer coisa, o texto é quebrado em tokens — pedaços de texto que podem ser palavras inteiras, partes de palavras ou até pontuação. A palavra 'inteligência', por exemplo, pode virar 2 ou 3 tokens dependendo do modelo.\n\n## Geração de texto\n\nNa hora de gerar, o modelo não 'escolhe' a próxima palavra — ele calcula uma distribuição de probabilidade sobre todo o vocabulário e seleciona um token com base nessa distribuição. É por isso que o mesmo prompt pode gerar respostas diferentes a cada vez.\n\n## Conclusão\n\nEntender LLMs não é mágica — é matemática, matrizes e muito dado de treinamento. O que parece inteligência emergente é, no fundo, compressão estatística extremamente sofisticada de texto humano.",
+    "categoria": "IA",
+    "tags": ["LLM", "Transformer", "IA Generativa"],
+    "autor": "NewsTech",
+    "data": "2026-05-14",
+    "tempoLeitura": "12 min",
+    "destaque": true
+  },
+  {
+    "id": 2,
+    "titulo": "Agentes autônomos de IA: o que mudou em 2026",
+    "resumo": "De assistentes que respondem perguntas a sistemas que executam tarefas complexas sozinhos — entenda a evolução dos agentes de IA.",
+    "conteudo": "Em 2023, agentes de IA eram principalmente uma promessa. Em 2026, eles estão em produção em centenas de empresas ao redor do mundo.\n\n## O que é um agente de IA?\n\nUm agente é um sistema de IA capaz de planejar e executar uma sequência de ações para atingir um objetivo. Diferente de um chatbot que responde uma pergunta, um agente pode: pesquisar na web, escrever código, executar esse código, analisar o resultado e iterar — tudo sem intervenção humana.\n\n## O que mudou em 2026\n\nTrês avanços tornaram os agentes práticos:\n\n1. **Modelos mais confiáveis** — menos alucinações, melhor raciocínio de múltiplos passos\n2. **Ferramentas padronizadas** — protocolos como MCP facilitam integração com sistemas externos\n3. **Custo menor** — inferência ficou 10x mais barata que em 2023\n\n## Casos de uso reais\n\nHoje agentes são usados para: revisão de código, análise de contratos, suporte ao cliente de nível 2, e até pesquisa científica. A questão não é mais 'se' mas 'como' integrá-los com segurança.",
+    "categoria": "IA",
+    "tags": ["Agentes", "Automação", "IA"],
+    "autor": "NewsTech",
+    "data": "2026-05-14",
+    "tempoLeitura": "15 min",
+    "destaque": false
+  },
+  {
+    "id": 3,
+    "titulo": "NVIDIA Blackwell vs AMD MI350: qual GPU domina o mercado de IA?",
+    "resumo": "Comparamos as duas GPUs mais poderosas disponíveis para cargas de trabalho de IA — em desempenho, consumo e custo-benefício.",
+    "conteudo": "A guerra das GPUs para IA nunca foi tão acirrada. Com a NVIDIA lançando a arquitetura Blackwell e a AMD respondendo com a MI350, o mercado finalmente tem uma competição real.\n\n## NVIDIA Blackwell (B200)\n\nA B200 representa um salto de geração. Com 192GB de HBM3e e largura de banda de memória de 8 TB/s, ela é projetada para modelos com trilhões de parâmetros. Em benchmark de inferência com LLMs de 70B parâmetros, a B200 entrega cerca de 4.5x o throughput de uma A100.\n\n## AMD MI350\n\nA AMD aposta em compatibilidade. A MI350 usa ROCm 7, que finalmente está maduro o suficiente para rodar PyTorch e JAX sem grandes modificações de código. O desempenho bruto fica 15-20% abaixo da B200, mas o preço é consideravelmente menor.\n\n## Veredicto\n\nPara grandes datacenters treinando modelos proprietários: Blackwell. Para empresas que querem reduzir dependência da NVIDIA e rodar inferência em escala: MI350 vale a avaliação séria.",
+    "categoria": "Hardware",
+    "tags": ["NVIDIA", "AMD", "GPU", "Hardware"],
+    "autor": "NewsTech",
+    "data": "2026-05-13",
+    "tempoLeitura": "9 min",
+    "destaque": false
+  },
+  {
+    "id": 4,
+    "titulo": "Rust em 2026: por que virou escolha padrão para sistemas críticos",
+    "resumo": "Da Mozilla para o kernel Linux, do Windows ao firmware — Rust conquistou a indústria. Entenda por quê.",
+    "conteudo": "Em 2016, Rust era uma curiosidade acadêmica usada por entusiastas. Em 2026, é a segunda linguagem mais usada no kernel Linux, parte do Windows 11, e adotada por Google, Amazon e Meta para infraestrutura crítica.\n\n## O problema que Rust resolve\n\nCerca de 70% das vulnerabilidades de segurança em software de sistemas são erros de memória — buffer overflows, use-after-free, race conditions. C e C++ deixam esses erros escaparem para produção. Rust os torna impossíveis em tempo de compilação.\n\n## O sistema de ownership\n\nA inovação central do Rust é o borrow checker — um analisador estático embutido no compilador que garante que:\n- Cada valor tem exatamente um dono\n- Referências não vivem mais que o dado que referenciam\n- Não há acesso simultâneo mutável ao mesmo dado\n\nIsso elimina toda uma classe de bugs sem garbage collector e sem overhead de runtime.\n\n## Por que agora?\n\nO ecossistema amadureceu. As bibliotecas existem, a toolchain é estável, e programadores C++ experientes conseguem ser produtivos em Rust em poucos meses.",
+    "categoria": "Software",
+    "tags": ["Rust", "Sistemas", "Segurança"],
+    "autor": "NewsTech",
+    "data": "2026-05-12",
+    "tempoLeitura": "7 min",
+    "destaque": false
+  },
+  {
+    "id": 5,
+    "titulo": "Deepfakes e autenticação: como a biometria está sendo repensada",
+    "resumo": "Com deepfakes cada vez mais convincentes, sistemas de autenticação por rosto e voz estão sendo colocados em xeque. O que vem depois?",
+    "conteudo": "Em 2025, um banco europeu perdeu €35 milhões para fraude baseada em deepfake de vídeo em tempo real. O CEO foi 'clonado' em uma videochamada e convenceu funcionários a autorizar transferências. É o novo normal.\n\n## Por que deepfakes quebraram a biometria\n\nSistemas de reconhecimento facial foram treinados para identificar rostos reais versus fotos planas. Deepfakes em vídeo são convincentes o suficiente para enganar muitos desses sistemas, especialmente os mais antigos.\n\n## As novas abordagens\n\n**Liveness detection adversarial** — em vez de verificar se o rosto parece real, o sistema desafia o usuário com movimentos imprevisíveis que modelos generativos têm dificuldade de replicar em tempo real.\n\n**Autenticação multimodal** — combinar biometria com device fingerprint, padrão de digitação e localização reduz drasticamente a superfície de ataque.\n\n**Criptografia de identidade** — soluções baseadas em ZK-proofs permitem provar identidade sem revelar dados biométricos.",
+    "categoria": "Segurança",
+    "tags": ["Deepfake", "Biometria", "Segurança"],
+    "autor": "NewsTech",
+    "data": "2026-05-11",
+    "tempoLeitura": "8 min",
+    "destaque": false
+  },
+  {
+    "id": 6,
+    "titulo": "Computação quântica: onde estamos e quando vai mudar tudo",
+    "resumo": "Do qubit ao algoritmo de Shor — entenda o estado atual da computação quântica e o que esperar dos próximos anos.",
+    "conteudo": "A computação quântica está em um momento peculiar: promissora demais para ignorar, imatura demais para a maioria das aplicações práticas. Mas 2026 trouxe avanços reais.\n\n## O que é um qubit\n\nEnquanto um bit clássico é 0 ou 1, um qubit pode estar em superposição — uma combinação probabilística dos dois estados ao mesmo tempo. Isso não significa que é 'dois bits em um' — significa que certas operações matemáticas podem ser realizadas exponencialmente mais rápido.\n\n## O problema do ruído\n\nQubits físicos são extremamente frágeis. Qualquer interação com o ambiente causa decoerência — o qubit 'esquece' seu estado quântico. Por isso, computadores quânticos atuais precisam operar perto do zero absoluto (-273°C).\n\n## IBM e os 1.000 qubits\n\nEm 2026, a IBM operou pela primeira vez um sistema com 1.127 qubits lógicos com taxa de erro abaixo de 0.1% — limiar considerado necessário para aplicações práticas. Ainda não quebra RSA-2048, mas está no caminho.\n\n## Quando vai mudar tudo?\n\nConsenso atual na comunidade científica: aplicações práticas transformadoras (simulação molecular, otimização logística, criptografia) em 5 a 15 anos. Não é amanhã — mas é próximo o suficiente para você precisar saber o que está vindo.",
+    "categoria": "Ciência",
+    "tags": ["Quantum", "IBM", "Computação"],
+    "autor": "NewsTech",
+    "data": "2026-05-10",
+    "tempoLeitura": "11 min",
+    "destaque": false
+  }
+]
